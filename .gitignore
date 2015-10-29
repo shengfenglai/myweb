@@ -1,5 +1,5 @@
 ﻿# maven
-.target/
+/.target/
 
 # eclipse
 .settings/
