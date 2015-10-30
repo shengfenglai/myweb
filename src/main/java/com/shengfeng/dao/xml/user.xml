@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shengfeng.dao.mapper.UserMapper">
+	<insert id="addUser" parameterType="com.shengfeng.po.User">
+		<selectKey resultType="long" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID()
+		</selectKey>
+		insert into b_user (username,password,level,sex,mobilephone,img) values (#{username},#{password},#{level},#{sex},#{mobilephone},#{img})
+	</insert>
+
+
+</mapper>
