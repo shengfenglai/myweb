@@ -15,7 +15,7 @@
 				<includes>
 					<include>datasource.properties</include>
 					<include>applicationContext.xml</include>
-					<include>log4j.properties</include>
+					<include>applicationContext-mybatis.xml</include>
 				</includes>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>
@@ -39,14 +39,14 @@
 		</testResources>
 
 	</build>
-	
-	
-	
+
+
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -164,6 +164,9 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.3.5</version>
 		</dependency>
+
+
+
 	</dependencies>
 
 </project>

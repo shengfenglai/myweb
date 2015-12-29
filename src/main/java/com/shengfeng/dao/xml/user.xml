@@ -5,8 +5,8 @@
 		<selectKey resultType="long" order="AFTER" keyProperty="id">
 			select LAST_INSERT_ID()
 		</selectKey>
-		insert into b_user (username,password,level,sex,mobilephone,img) values (#{username},#{password},#{level},#{sex},#{mobilephone},#{img})
+		insert into b_user (username,password,level,sex,mobilephone,img)
+		values (#{username},#{password},#{level},#{sex},#{mobilephone},#{img})
 	</insert>
-
 
 </mapper>
