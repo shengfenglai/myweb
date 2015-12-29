@@ -1,8 +1,6 @@
 package com.shengfeng;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -25,15 +23,4 @@ public class TestBase {
         System.out.flush();
     }
 
-    @Before
-    public void before() {
-        System.out.println("before() in TestBase");
-        System.out.flush();
-    }
-
-    @After
-    public void after() {
-        System.out.println("after() in TestBase");
-        System.out.flush();
-    }
 }
