@@ -1,0 +1,10 @@
+{
+
+	"username":"$!{userInfo.username}",
+	"password":"$!{userInfo.password}",
+	"level":"$!{userInfo.level}",
+	"sex":$!{userInfo.sex},
+	"mobilephone":"$!{userInfo.mobilephone}",
+	"img":"$!{userInfo.img}"
+	
+}

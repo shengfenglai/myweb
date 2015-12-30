@@ -9,4 +9,22 @@
 		values (#{username},#{password},#{level},#{sex},#{mobilephone},#{img})
 	</insert>
 
+	<resultMap type="com.shengfeng.po.User" id="userMap">
+		<id property="username" column="username" />
+		<id property="password" column="password" />
+		<id property="level" column="level" />
+		<id property="sex" column="sex" />
+		<id property="mobilephone" column="mobilephone" />
+		<id property="img" column="img" />
+	</resultMap>
+	
+	<sql id="userInfo">
+		username,password,level,sex,mobilephone,img
+	</sql>
+	
+	<select id="getUserByUserId" parameterType="long" resultMap="userMap">
+	 	select 
+	 	<include refid="userInfo"></include>
+	 	from b_user  where id=#{userId}
+	</select>
 </mapper>

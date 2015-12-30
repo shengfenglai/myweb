@@ -17,5 +17,9 @@ public class UserDaoImpl implements UserDao {
         userMapper.addUser(user);
         return user.getId();
     }
+
+    public User getUserByUserId(long userId) {
+        return userMapper.getUserByUserId(userId);
+    }
     
 }

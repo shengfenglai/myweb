@@ -1,8 +1,9 @@
-package com.shengfeng.dao;
+package com.shengfeng.service;
 
 import com.shengfeng.po.User;
 
-public interface UserDao {
+public interface UserService {
+    
     long addUser(User user);
     
     User getUserByUserId(long userId);

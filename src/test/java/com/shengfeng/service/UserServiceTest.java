@@ -1,4 +1,4 @@
-package com.shengfeng.dao;
+package com.shengfeng.service;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,21 +10,22 @@ import com.shengfeng.TestBase;
 import com.shengfeng.po.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-public class UserDaoTest extends TestBase{
-    
+public class UserServiceTest extends TestBase {
+
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
     
-    @Test
+    
+    @Test 
     public void testAddUser() {
         User user = new User();
-        user.setUsername("xiaolai");
-        user.setPassword("123456");
+        user.setUsername("zhousan");
+        user.setPassword("123");
         user.setSex(0);
-        user.setMobilephone("18179766500");
+        user.setMobilephone("18779883833");
         user.setLevel(0);
-        user.setImg("http://localhost:8080/shengfeng.jpg");
-        long userId = userDao.addUser(user);
+        user.setImg("http://shengfeng.jpg");
+        long userId = userService.addUser(user);
         System.out.println(userId);
         Assert.assertNotEquals(0, userId);
     }
@@ -32,11 +33,9 @@ public class UserDaoTest extends TestBase{
     
     @Test
     public void testGetUserByUserId() {
-        User user = userDao.getUserByUserId(1);
+        User user = userService.getUserByUserId(5);
         System.out.println(user.getUsername());
         Assert.assertNotNull(user);
     }
-    
-    
-    
+
 }
